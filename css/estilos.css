@@ -1,0 +1,111 @@
+body{
+	background: black;
+	font-family: "Brush Script MT";
+	color: white;
+}
+
+.contenedorprincipal{
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+header{
+	background: #5b7989;
+	text-align: left;
+	text-shadow: 2px 3px 4px #02010a;
+	border-radius: 10px 10px 0px 0px;
+	height: 10%;
+}
+nav{
+	text-align: right;
+	font-size: 20px;
+} 
+
+nav a{
+	text-decoration: none;
+	color: white;
+}
+
+img{
+	box-shadow: 5px 8px 9px #82c3a6;
+	border: solid black 2px;	
+}
+
+#subrayado{
+	text-decoration:underline white;
+}
+
+.primaria{
+	width: 100%;
+	height: 300px;
+	background: #82c3a6;
+	display: flex ;
+	flex-flow: row nowrap;
+}
+
+.central{
+	order: 1;
+	flex-grow: 2;
+}
+
+.central img{
+	width: 75%;
+	height: 75%;
+	margin-left: 13%;
+	margin-top: 5%;
+
+}
+
+.contenedorimagen{
+	width: 100%;
+	height: 300px;
+	background: #d5c75f;
+	display: flex ;
+	flex-flow: row nowrap;
+}
+
+.imagen1 img{
+	width: 75%;
+	height: 75%;
+	margin-left: 13%;
+	margin-top: 8%;
+
+}
+
+.imagen1{
+	//background: green;
+	order: 1;
+	flex-grow: 2;
+}
+
+/*.imagen2{
+	background: pink;
+	order: 3;
+	flex-grow: 1;
+}*/
+
+.imagen3 img{
+	width: 75%;
+	height: 75%;
+	margin-left: 13%;
+	margin-top: 8%;
+}
+
+.imagen3{
+	//background: red;
+	order: 3;
+	flex-grow: 2;
+}
+
+div [class*="imagen"]{
+	min-height: 200px;
+	flex: 1 2 40%;
+}
+
+.pie{
+	width: 200px;
+	height: 300px;
+	background:  #C6d5c5;
+	border: solid 5px;
+}
