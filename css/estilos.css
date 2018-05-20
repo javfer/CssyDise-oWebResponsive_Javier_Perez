@@ -1,6 +1,12 @@
+@font-face{
+  font-family: 'DancingScript';
+  src: url('DancingScript-Regular.otf');
+  font-weight: bold;
+}
+
 body{
 	background: black;
-	font-family: "Brush Script MT";
+	font-family: 'DancingScript', arial;
 	color: white;
 }
 
@@ -20,6 +26,7 @@ header{
 nav{
 	text-align: right;
 	font-size: 20px;
+	margin-right: 3%;
 } 
 
 nav a{
@@ -27,7 +34,7 @@ nav a{
 	color: white;
 }
 
-img{
+img{//border y sombras de imagenes
 	box-shadow: 5px 8px 9px #82c3a6;
 	border: solid black 2px;	
 }
@@ -36,76 +43,181 @@ img{
 	text-decoration:underline white;
 }
 
-.primaria{
-	width: 100%;
-	height: 300px;
+
+.contenedorimagen1{
 	background: #82c3a6;
-	display: flex ;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.contenedorimagen2{
+	background: #d5c75f;
+	display: flex;
 	flex-flow: row nowrap;
 }
 
-.central{
-	order: 1;
-	flex-grow: 2;
-}
-
-.central img{
-	width: 75%;
-	height: 75%;
-	margin-left: 13%;
-	margin-top: 5%;
-
-}
-
-.contenedorimagen{
+.contenedorprincipal [class*="contenedorimagen"]{
 	width: 100%;
 	height: 300px;
-	background: #d5c75f;
-	display: flex ;
-	flex-flow: row nowrap;
-}
-
-.imagen1 img{
-	width: 75%;
-	height: 75%;
-	margin-left: 13%;
-	margin-top: 8%;
-
-}
-
-.imagen1{
-	//background: green;
-	order: 1;
-	flex-grow: 2;
-}
-
-/*.imagen2{
-	background: pink;
-	order: 3;
-	flex-grow: 1;
-}*/
-
-.imagen3 img{
-	width: 75%;
-	height: 75%;
-	margin-left: 13%;
-	margin-top: 8%;
-}
-
-.imagen3{
-	//background: red;
-	order: 3;
-	flex-grow: 2;
 }
 
 div [class*="imagen"]{
-	min-height: 200px;
+	min-height: 150px;
 	flex: 1 2 40%;
 }
 
+[class*=imagen] img{
+
+	width: 75%;
+	height: 75%;
+	margin-left: 15%;
+	margin-top: 4%;
+}
+
+.imagen1{
+	order: 1;
+	flex-grow: 1;
+}
+
+.imagen2{
+	order: 2;
+	flex-grow: 2;
+}
+figcaption{
+	color: black;
+	text-align: center;
+}
+.imagen3{
+	order: 3;
+	flex-grow: 2;
+}
+
+.imagen2:hover{
+	animation: mianimacion 3s;
+}
+
+.imagen3:hover{
+	transform: translate(20px, -5px);
+	transition: transform 1s;
+}
+
+@-webkit-keyframes mianimacion{
+	from{
+		transform: rotate(10deg);
+	}
+	to{
+		height: 20;
+
+	}
+}
+
 .pie{
-	width: 200px;
+	width: 100%;
 	height: 300px;
+	color: black;
 	background:  #C6d5c5;
-	border: solid 5px;
+	border-radius: 0px 0px 10px 10px;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.pie div{
+	width: 25%;
+	height: 66%;
+	margin: 2%;
+	padding: 2%;
+	flex: 1 2 40%;
+
+}
+
+.contacto{
+	order: 1;
+	flex-grow: 1;
+}
+
+.terminos{
+	order: 2;
+	flex-grow: 1;
+}
+
+.redes{
+	order: 3;
+	flex-grow: 1;
+}
+
+.derechos{
+	order: 4;
+	flex-grow: 1;
+}
+
+.redes img{
+	width: 25px;
+	border: none;
+	margin: 3px;
+	display: inline-block;
+}
+
+.redes p{
+	font-size: 10px;
+	display: inline-block;
+}
+
+@media(max-width: 899px){
+	header{
+	background: #5b7989;
+	text-align: left;
+	font-size: 10px;
+	text-shadow: 2px 3px 4px #02010a;
+	border-radius: 10px 10px 0px 0px;
+	height: 10%;
+}
+
+nav{
+	text-align: right;
+	font-size: 10px;
+	margin-right: 3%;
+} 
+	.contenedorimagen2{
+	background: #d5c75f;
+	display: flex;
+	flex-flow: row wrap;
+	
+}
+
+.contenedorprincipal [class*="contenedorimagen"]{
+	width: auto;
+	height: auto;
+}
+
+div [class*="imagen"]{
+	min-height: auto;
+	flex: 1 1 100%;
+	}
+
+[class*=imagen] img{
+
+	width: 75%;
+	height: 75%;
+	margin-left: 15%;
+	margin-top: 4%;
+}
+
+
+	.pie{
+	width: 100%;
+	height: auto;
+	color: black;
+	background:  #C6d5c5;
+	border-radius: 0px 0px 10px 10px;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.pie div{
+	width:  auto;
+	height: auto;
+	
+	flex: 1 1 50%;
+
+}
 }
