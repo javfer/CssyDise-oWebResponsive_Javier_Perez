@@ -11,9 +11,9 @@ body{
 }
 
 .contenedorprincipal{
-	width: 80%;
-	margin-right: 10%;
-	margin-left: 10%;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 header{
@@ -21,7 +21,7 @@ header{
 	text-align: left;
 	text-shadow: 2px 3px 4px #02010a;
 	border-radius: 10px 10px 0px 0px;
-	height: 10%;
+	//height: 10%;
 }
 nav{
 	text-align: right;
@@ -58,12 +58,12 @@ img{//border y sombras de imagenes
 
 .contenedorprincipal [class*="contenedorimagen"]{
 	width: 100%;
-	height: 300px;
+	height:auto;
 }
 
 div [class*="imagen"]{
-	min-height: 150px;
-	flex: 1 2 40%;
+	min-height: auto;
+	flex: 1 2 50%;
 }
 
 [class*=imagen] img{
@@ -165,18 +165,25 @@ figcaption{
 @media(max-width: 899px){
 	header{
 	background: #5b7989;
-	text-align: left;
-	font-size: 10px;
+	text-align: center;
+	font-size: 20px;
 	text-shadow: 2px 3px 4px #02010a;
 	border-radius: 10px 10px 0px 0px;
 	height: 10%;
 }
 
 nav{
-	text-align: right;
-	font-size: 10px;
+	text-align: center;
+	//font-size: 10px;
 	margin-right: 3%;
 } 
+
+.contenedorprincipal{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 	.contenedorimagen2{
 	background: #d5c75f;
 	display: flex;
@@ -216,8 +223,9 @@ div [class*="imagen"]{
 .pie div{
 	width:  auto;
 	height: auto;
-	
+	//border: solid 1px black;
 	flex: 1 1 50%;
+	text-align: center;
 
 }
 }
